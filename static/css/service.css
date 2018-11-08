@@ -1,0 +1,75 @@
+.bgbanner0{
+    background-image:url("../img/banner0.jpg");
+    background-size: 120% 120%;
+    background-position:10% 10%;
+    background-repeat: no-repeat;
+}
+.t130{
+    top: 130px;
+}
+.t290{
+    top: 290px;
+}
+.font_light100{
+    font-weight: 100;
+}
+.HelveticaNeue{
+    font-family: HelveticaNeue;
+}
+.w800{
+    width: 800px;
+}
+.l50ml_400{
+    left: 50%;
+    margin-left: -400px;
+}
+.t400{
+    top: 400px;
+}
+@keyframes change0 {
+    from{
+        opacity: 0;
+        font-size: 12px;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        font-size: 120px;
+        transform: translateY(0);
+    }
+}
+@keyframes change1{
+    from{
+        opacity: 0;
+        transform-origin:1200px 150px;
+        transform:  translateY(-100px) translateX(-600px) rotate(0deg);
+    }
+    25%{
+        opacity: 0.25;
+        transform-origin:1200px 150px;
+        transform:  translateY(-100px) translateX(-600px) rotate(90deg);
+    }
+    to{
+        opacity: 1;
+        transform:  translateY(0px) translateX(0px) rotate(0deg);
+    }
+}
+@keyframes change2 {
+    from{
+        opacity: 0;
+        transform: scale(3);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.change0_1s{
+    animation: change0 1s linear;
+}
+.change1_1s{
+    animation: change1 1s linear;
+}
+.change2_1s{
+    animation: change2 1s linear;
+}

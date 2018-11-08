@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body onscroll="scroll()">
+    <div class="w-100 position-relative h660">
+        <div class="w-100 position-absolute  h74 z_index1">
+            <ul class="cwhite list-unstyled w700h34 m20auto">
+                <li class="float-left ml50"><img src="img/arr-r.png" alt="" class="mr10"/><a href="index.html" class="cwhite hcff6700">首页</a></li>
+                <li class="float-left ml50"><a href="about.html" class="cwhite hcff6700">关于我们</a></li>
+                <li class="float-left ml50"><a href="case.html" class="cwhite hcff6700">案例</a></li>
+                <li class="float-left ml50"><a href="service.html" class="cwhite hcff6700">服务</a></li>
+                <li class="float-left ml50"><a href="" class="cwhite hcff6700">资讯</a></li>
+                <li class="float-left ml50"><a href="" class="cwhite hcff6700">常见问题</a></li>
+                <li class="float-left ml50"><a href="" class="cwhite hcff6700">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="w-100" id="banner">
+            <img src="img/loading.gif" alt="" class="position-absolute loading"/>
+            <img src="img/20170404030005930.jpg" alt="" class="w-100 position-absolute h-100 opacity0" id="banner3"/>
+            <img src="img/20170404030013213.jpg" alt="" class="w-100 position-absolute h-100 opacity0" id="banner2"/>
+            <img src="img/20170404030019803.jpg" alt="" class="w-100 position-absolute h-100 opacity0" id="banner1"/>
+            <img src="img/prev.png" alt="上一张" class="position-absolute prev pointer" onclick="prev()"/>
+            <img src="img/next.png" alt="下一张" class="position-absolute next pointer" onclick="next()"/>
+            <div class="bannerchange position-absolute bannerchange1" onclick="bannerchange1()" id="bannerchange1"></div>
+            <div class="bannerchange position-absolute bannerchange2" onclick="bannerchange2()" id="bannerchange2"></div>
+            <div class="bannerchange position-absolute bannerchange3" onclick="bannerchange3()" id="bannerchange3"></div>
+        </div>
+    </div>
+    <div>
+        <p class="fz40 font-weight-bold text-center mt-5 allchange0">我们的服务</p>
+        <p class="caaa text-center">技术更跨界，创意更自由，优秀影楼网络服务商！</p>
+    </div>
+    <div class="w-100">
+        <div class="d-flex justify-content-around mcenter flex-wrap bgchange" style="width: 90%">
+
+            <div class="percent25 position-relative showhid">
+                <div class=" bg5e904d w284h460 mcenter">
+                </div>
+                <div class="bgba292e hidcolor">
+                </div>
+                <div class="hidcolorimg">
+                    <img src="img/fwxm_img1.png" alt="" class="transitionall1s"/>
+                </div>
+                <p class="hidcolord1">高端影楼网站设计制作</p>
+                <p class="hidcolord2">DESIGN CUSTOM</p>
+                <p class="hidcolord3">WedCMS团队凭借多年的建站经验为企业量身定制，让您的影楼企业在残酷的网络竞争中脱颖而出，立于不败之地。</p>
+                <button class="hidcolorbtn">立即咨询</button>
+            </div>
+            <div class="percent25 position-relative showhid">
+                <div class=" bg5d4378 w284h460 mcenter">
+                </div>
+                <div class="bg1599a5 hidcolor"></div>
+                <div class="hidcolorimg">
+                    <img src="img/fwxm_img2.png" alt="" class="transitionall1s"/>
+                </div>
+                <p class="hidcolord1">网络运营与推广</p>
+                <p class="hidcolord2">NETWORK OPERATIONS</p>
+                <p class="hidcolord3">专注于高品质网络品牌运营推广服务，在网络中树立企业品牌形象，提高搜索关键词转换率，以及多终端广告展现！</p>
+                <button class="hidcolorbtn">立即咨询</button>
+            </div>
+            <div class="percent25 position-relative showhid">
+                <div class=" bgba292e w284h460 mcenter">
+                </div>
+                <div class="bg5e904d hidcolor"></div>
+                <div class="hidcolorimg">
+                    <img src="img/fwxm_img3.png" alt="" class="transitionall1s"/>
+                </div>
+                <p class="hidcolord1">HTML5响应式网站开发</p>
+                <p class="hidcolord2">RESPONSIVE WEBSITE</p>
+                <p class="hidcolord3">HTML5+CSS3设计制作的同时兼容手机和IPAD等触屏设备分辨率，达到最优访问效果，网站数据同步各终端。</p>
+                <button class="hidcolorbtn">立即咨询</button>
+            </div>
+            <div class="percent25 position-relative showhid">
+                <div class=" bg1599a5 w284h460 mcenter">
+                </div>
+                <div class="bg5d4378 hidcolor"></div>
+                <div class="hidcolorimg">
+                    <img src="img/fwxm_img4.png" alt="" class="transitionall1s"/>
+                </div>
+                <p class="hidcolord1">移动端手机网站与APP</p>
+                <p class="hidcolord2">NETWORK OPERATIONS</p>
+                <p class="hidcolord3">专注移动端手机网站设计、微网站、手机APP定制开发，创造有活力的品牌网站，在移动互联网市场中取得先机。</p>
+                <button class="hidcolorbtn">立即咨询</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="w-100 mt-5 bgfixed p50_0">
+        <p class="cwhite fz40 text-center font-weight-bold zxal">最新案例</p>
+        <p class="text-center cwhite mt20">6年建站经验，2016开始，已有超过20+影楼与我们建立合作，我们才刚刚开始!</p>
+        <div class="d-flex w-100 mt40 flex-wrap">
+            <div class="percent25">
+                <div class="w358h270 mcenter overhid position-relative pointer">
+                    <div class="w320h270 bg0002 position-absolute z_index1"></div>
+                    <img src="img/thumb_360x270_20170424123439186.jpg" alt="" class=" transitionall1s"/>
+                    <div class="w100h40 bg0002 transitionall1s">满庭芳婚纱摄影</div>
+                </div>
+            </div>
+            <div class="percent25">
+                <div class="w358h270 mcenter overhid position-relative pointer">
+                    <div class="w320h270 bg0002 position-absolute z_index1"></div>
+                    <img src="img/thumb_360x270_20170424125137921.jpg" alt="" class=" transitionall1s"/>
+                    <div class="w100h40 bg0002 transitionall1s">杭州布恩儿童摄影</div>
+                </div>
+            </div>
+            <div class="percent25">
+                <div class="w358h270 mcenter overhid position-relative pointer">
+                    <div class="w320h270 bg0002 position-absolute z_index1"></div>
+                    <img src="img/thumb_360x270_1801065a503852e7501.jpg" alt="" class=" transitionall1s"/>
+                    <div class="w100h40 bg0002 transitionall1s">杭州瑞拉皇后孕妇摄影</div>
+                </div>
+            </div>
+            <div class="percent25">
+                <div class="w358h270 mcenter overhid position-relative pointer">
+                    <div class="w320h270 bg0002 position-absolute z_index1"></div>
+                    <img src="img/thumb_360x270_20171108090850822.jpg" alt="" class=" transitionall1s"/>
+                    <div class="w100h40 bg0002 transitionall1s">宁波麦田视觉摄影</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p50_0 w-100 bgeee">
+        <p class="fz40 text-center font-weight-bold c666">WedCMS简介</p>
+        <p class="fz18 text-center c666 jj" >WedCMS（佳人影楼网站管理系统）是本团队基于MVC开发的一套先进的网站管理系统，主要用于影楼和婚庆行业。</p>
+        <div class="w1200_100 mcenter d-flex flex-wrap overhid">
+            <div class="p-25 mt20">
+                <div class="w276h230 mcenter bg-white pt10 opacity0">
+                    <div class="w42h42 overhid imgroatote transitionall1s">
+                        <img src="img/icon_feature.png" alt="" class=""/>
+                    </div>
+                    <p class="text-center fz20 mt20">高质专业的定制开发设计</p>
+                    <p class="w-90 mcenter fz14 text-center">我们拥有多年的高端企业网站及博客程序的设计开发经验，专注于为您提供最专业的标准化网站设计方案，从而创建独一无二的特色优势网站。</p>
+                </div>
+            </div>
+            <div class="p-25 mt20">
+                <div class="w276h230 mcenter bg-white pt10 opacity0">
+                    <div class="w42h42 overhid imgroatote transitionall1s">
+                        <img src="img/icon_feature.png" alt="" class="ty42"/>
+                    </div>
+                    <p class="text-center fz20 mt20">功能强大的后台管理系统</p>
+                    <p class="w-90 mcenter fz14 text-center">拥有功能强大的后台管理，帮助您轻松快捷地安装布置网站内容，减少网站主题的操作使用成本和对繁复的程序代码修改难度。</p>
+                </div>
+            </div>
+            <div class="p-25 mt20">
+                <div class="w276h230 mcenter bg-white pt10 opacity0">
+                    <div class="w42h42 overhid imgroatote transitionall1s">
+                        <img src="img/icon_feature.png" alt="" class="ty84"/>
+                    </div>
+                    <p class="text-center fz20 mt20">合理规范的搜索优化功能</p>
+                    <p class="w-90 mcenter fz14 text-center">我们的网站程序更加强调和注重搜索优化，充分发挥CMS平台的SEO特色优势，让您更加轻松快捷地推广优化网站，提高网站的搜索收录及排名。</p>
+                </div>
+
+            </div>
+            <div class="p-25 mt20">
+                <div class="w276h230 mcenter bg-white pt10 opacity0">
+                    <div class="w42h42 overhid imgroatote transitionall1s">
+                        <img src="img/icon_feature.png" alt="" class="ty126"/>
+                    </div>
+                    <p class="text-center fz20 mt20">免费及时的售后服务支持</p>
+                    <p class="w-90 mcenter fz14 text-center">提供在线售后服务支持和免费升级更新，确保您的网站始终运行在最佳状态；多种实时的在线沟通渠道，免去后顾之忧，替您节省网站维护时间。</p>
+                </div>
+            </div>
+            <div class="m40auto position-relative overhid h55">
+                <button id="introduce">详细介绍</button>
+                <div class="position-absolute translight"></div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 p50_0">
+        <p class="fz40 text-center c666 font-weight-light">资讯动态</p>
+        <p class="text-center fz18 c666 zxdt">6年建站经验，2016开始，已有超过20+影楼与我们建立合作，我们才刚刚开始..</p>
+        <div class="d-flex flex-wrap w-100 justify-content-around">
+            <div class="w585h180 bgiline mt30 d-flex p30 justify-content-between pointer flex-wrap">
+                <div class="w180h120 position-relative overhid center600">
+                    <img src="img/thumb_180x120_1801255a693bcf4885e.jpg" class="transitionall1s" alt=""/>
+                    <div class="w180h120 position-absolute top0 bg0002 opacity0 transitionall1s"></div>
+                </div>
+                <div class="w385">
+                    <p class="fz16">织梦DedeCMS转换到PHPCMS V9的注意事项</p>
+                    <p class="fz12 c888 mt_16" >织梦DedeCMS转换到PHPCMS V9的注意事项织梦内容管理系统(DedeCms) 以简单、实用、开源而闻名，是国内最知名的PHP开源网站管理系统，也是使用用</p>
+                    <span class="float-right mt_16 p5_10 bgddd transitionall1s">详细</span>
+                </div>
+
+            </div>
+            <div class="w585h180 bgiline mt30 d-flex p30 justify-content-between pointer flex-wrap">
+                <div class="w180h120 position-relative overhid center600">
+                    <img src="img/thumb_180x120_1801255a694abb8504d.jpg" class="transitionall1s" alt=""/>
+                    <div class="w180h120 position-absolute top0 bg0002 opacity0 transitionall1s"></div>
+                </div>
+                <div class="w385">
+                    <p class="fz16">php中的server变量一览</p>
+                    <p class="fz12 c888 mt_16" >php中的server变量一览php中的server变量在php中占有重要的地位，但由于其数组子内容较多，让人记忆起来有些困难，这里就罗列一下相关的含义</p>
+                    <span class="float-right mt_16 p5_10 bgddd transitionall1s">详细</span>
+                </div>
+            </div>
+            <div class="w585h180 bgiline mt30 d-flex p30 justify-content-between pointer flex-wrap">
+                <div class="w180h120 position-relative overhid center600">
+                    <img src="img/201801050921472823.jpg" alt="" class="transitionall1s" style="width: 100%;height: 100%;"/>
+                    <div class="w180h120 position-absolute top0 bg0002 opacity0 transitionall1s"></div>
+                </div>
+                <div class="w385">
+                    <p class="fz16">从盛名到骂名，算法的 2017</p>
+                    <p class="fz12 c888 mt_16" >已成国民应用的 Facebook、 今日头条们需要思考一个更严肃的问题：在算法帮助下获得海量用户、占据了用户每天大量使用时长后，如何让用户花费的...</p>
+                    <span class="float-right mt_16 p5_10 bgddd transitionall1s">详细</span>
+                </div>
+            </div>
+            <div class="w585h180 bgiline mt30 d-flex p30 justify-content-between pointer flex-wrap">
+                <div class="w180h120 position-relative overhid center600">
+                    <img src="img/thumb_180x120_20170521084616115.jpg" class="transitionall1s" alt=""/>
+                    <div class="w180h120 position-absolute top0 bg0002 opacity0 transitionall1s"></div>
+                </div>
+                <div class="w385">
+                    <p class="fz16">有人有数据，为何无法提升营运绩效？</p>
+                    <p class="fz12 c888 mt_16" >这前两天跟一位企业老板谈到「大数据」这个议题，他表示他们公司的 RD 上百人，公司的数据也很多，相信具有商业价值的内容应该不少，但很遗</p>
+                    <span class="float-right mt_16 p5_10 bgddd transitionall1s">详细</span>
+                </div>
+            </div>
+        </div>
+        <div class="w240h50 m40auto text-center bgff6700 lh50 cwhite fz20 bdr25 pointer position-relative">查看更多资讯>><div class="w240h50 bdff6700 position-absolute t0 bdr25"></div></div>
+    </div>
+    <div class="bgbanner3 w-100 p50_0 position-relative">
+        <div class="w-50 bdbaaa h30 mcenter"></div>
+        <div class="position-absolute fz40 w320h60 text-center top50lc bgeee">帮助导航</div>
+        <div class="w1200 d-flex m60auto flex-wrap justify-content-around">
+            <div class="w720 d-flex flex-wrap justify-content-around">
+                <div class="w216h320 mt20 bg-white pointer p0_15">
+                   <p class="mt30 fz20 font-weight-bold text-center">服务项目</p>
+                    <div class="w78h78 mcenter transitionall1s"><img src="img/preview-1.png" alt="" class="imgcover"/></div>
+                    <p class="fz16 h78 text-center">企业网站界面设计、定制开发、域名服务器一站式服务</p>
+                    <p class="text-center">查看更多 >></p>
+                </div>
+                <div class="w216h320 mt20 bg-white pointer p0_15">
+                    <p class="mt30 fz20 font-weight-bold text-center">合作流程</p>
+                    <div class="w78h78 mcenter transitionall1s"><img src="img/preview-2.png" alt="" class="imgcover"/></div>
+                    <p class="fz16 h78 text-center">从需求沟通、项目启动，到项目完成的合作流程</p>
+                    <p class="text-center">查看更多 >></p>
+                </div>
+                <div class="w216h320 mt20 bg-white pointer p0_15">
+                    <p class="mt30 fz20 font-weight-bold text-center">售后服务</p>
+                    <div class="w78h78 mcenter transitionall1s"><img src="img/preview-3.png" alt="" class="imgcover"/></div>
+                    <p class="fz16 h78 text-center">提供人性化售后服务支持，保障客户网站维护无忧</p>
+                    <p class="text-center">查看更多 >></p>
+                </div>
+            </div>
+            <div class="w480 d-flex flex-wrap justify-content-around">
+                <div class="w216h320 mt20 bg-white pointer p0_15">
+                    <p class="mt30 fz20 font-weight-bold text-center">常见问题</p>
+                    <div class="w78h78 mcenter transitionall1s"><img src="img/preview-4.png" alt="" class="imgcover"/></div>
+                    <p class="fz16 h78 text-center">售前咨询、合作事宜、付款等常规问答FAQ...</p>
+                    <p class="text-center">查看更多 >></p>
+                </div>
+                <div class="w216h320 mt20 bg-white pointer p0_15">
+                    <p class="mt30 fz20 font-weight-bold text-center">授权查询</p>
+                    <div class="w78h78 mcenter transitionall1s"><img src="img/preview-5.png" alt="" class="imgcover"/></div>
+                    <p class="fz16 h78 text-center">来这里讨论关于Phpcms等CMS的一切问题</p>
+                    <p class="text-center">查看更多 >></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 bg333 p50_0">
+        <p class="text-center cwhite fz40 font-weight-bold">联系我们</p>
+        <p class="text-center cwhite">您可以直接电话联系我们，或为了让我们更好的为您服务您也可以直接与我们客服QQ交谈</p>
+        <div class="w-75 mcenter d-flex flex-wrap justify-content-around">
+            <div class="w280h210 bgwhite mt20 bdr25 transitionall1s pointer p20_0">
+                <div class="w120h100 overhid mcenter"><img src="img/icon_contact.png" alt="" class="translate_120px transitionall1s"/></div>
+                <p class="text-center fz14 mt10">电话</p>
+                <p class="text-center fz18 font-weight-bold">12345678901</p>
+            </div>
+            <div class="w280h210 bgwhite mt20 bdr25 transitionall1s pointer p20_0">
+                <div class="w120h100 overhid mcenter"><img src="img/icon_contact.png" alt="" class="translate_240px transitionall1s"/></div>
+                <p class="text-center fz14 mt10">QQ</p>
+                <p class="text-center fz18 font-weight-bold">9876543210</p>
+            </div>
+        </div>
+    </div>
+    <script src="common.js"></script>
+    <script>
+       window.onload=function(){
+           $("banner1").style.opacity="1";
+           setInterval(next,10000);
+       }
+       var banner = 1;
+       function prev(){
+           if(banner==1){
+               $("banner1").style.opacity="0";
+               $("banner3").style.opacity="1";
+               $("bannerchange1").style.borderColor="white";
+               $("bannerchange3").style.borderColor="#ff6700";
+               banner=4;
+           }
+           if(banner==3){
+               $("banner3").style.opacity="0";
+               $("banner2").style.opacity="1";
+               $("bannerchange3").style.borderColor="white";
+               $("bannerchange2").style.borderColor="#ff6700";
+           }
+           if(banner==2){
+               $("banner2").style.opacity="0";
+               $("banner1").style.opacity="1";
+               $("bannerchange2").style.borderColor="white";
+               $("bannerchange1").style.borderColor="#ff6700";
+           }
+           banner--;
+       }
+       function next(){
+           if(banner==1){
+               $("banner1").style.opacity="0";
+               $("banner2").style.opacity="1";
+               $("bannerchange1").style.borderColor="white";
+               $("bannerchange2").style.borderColor="#ff6700";
+           }
+           if(banner==2){
+               $("banner2").style.opacity="0";
+               $("banner3").style.opacity="1";
+               $("bannerchange2").style.borderColor="white";
+               $("bannerchange3").style.borderColor="#ff6700";
+           }
+           if(banner==3){
+               $("banner3").style.opacity="0";
+               $("banner1").style.opacity="1";
+               $("bannerchange3").style.borderColor="white";
+               $("bannerchange1").style.borderColor="#ff6700";
+               banner=0;
+           }
+           banner++;
+       }
+        function bannerchange1(){
+            if(banner!=1){
+                $("banner1").style.opacity="1";
+                $("banner2").style.opacity="0";
+                $("banner3").style.opacity="0";
+                $("bannerchange1").style.borderColor="#ff6700";
+                $("bannerchange2").style.borderColor="white";
+                $("bannerchange3").style.borderColor="white";
+                banner=1;
+            }
+        }
+       function bannerchange2(){
+           if(banner!=2){
+               $("banner1").style.opacity="0";
+               $("banner2").style.opacity="1";
+               $("banner3").style.opacity="0";
+               $("bannerchange1").style.borderColor="white";
+               $("bannerchange2").style.borderColor="#ff6700";
+               $("bannerchange3").style.borderColor="white";
+               banner=2;
+           }
+       }
+       function bannerchange3(){
+           if(banner!=3){
+               $("banner1").style.opacity="0";
+               $("banner2").style.opacity="0";
+               $("banner3").style.opacity="1";
+               $("bannerchange1").style.borderColor="white";
+               $("bannerchange2").style.borderColor="white";
+               $("bannerchange3").style.borderColor="#ff6700";
+               banner=3;
+           }
+       }
+        var showhiddencolors=document.getElementsByClassName("showhid");
+        for(var showhiddencolor of showhiddencolors){
+            showhiddencolor.onmouseover=function(){
+                var showhiddencolor=this;
+                var hidcolor=showhiddencolor.children[1];
+                var btn=showhiddencolor.children[6];
+                btn.style.opacity="1";
+                var img=showhiddencolor.children[2].children[0];
+                hidcolor.style.height="460px";
+                timer1 = setTimeout(()=>{
+                    img.style.transform="translateY(-110px)";
+                },1000);
+            }
+            showhiddencolor.onmouseout=function(){
+                clearTimeout(timer1)
+                var showhiddencolor=this;
+                var btn=showhiddencolor.children[6];
+                btn.style.opacity="0";
+                var img=showhiddencolor.children[2].children[0];
+                var timer2 = setTimeout(()=>{
+                img.style.transform="translateY(0)";
+                },1000);
+                var hidcolor=showhiddencolor.children[1];
+                hidcolor.style.height="0";
+            }
+        }
+        var hidcolorbtns=document.getElementsByClassName("hidcolorbtn");
+        for(var hidcolorbtn of hidcolorbtns){
+            var tid = 0;
+            hidcolorbtn.onmouseover= function(){
+                var hidcolorbtn=this;
+                tid = setTimeout( function() {
+                    hidcolorbtn.style.backgroundColor="white";
+                    hidcolorbtn.style.color="#ff6700";
+                }, 1000 );
+            };
+            hidcolorbtn.onmouseout= function() {
+                clearTimeout( tid );//当在1秒内退出了hover事件就取消计时代码
+                var hidcolorbtn=this;
+                hidcolorbtn.style.backgroundColor="transparent";
+                hidcolorbtn.style.color="white";
+            } ;
+        }
+        var bgrgba5s = document.getElementsByClassName("w358h270");
+        for (var bgrgba5 of bgrgba5s){
+            bgrgba5.onmouseover=function(){
+                var bgrgba5=this;
+                bgrgba5.children[0].style.backgroundColor="rgba(0,0,0,0)";
+                bgrgba5.children[1].style.transform="scale(1.2)";
+                bgrgba5.children[2].style.transform="translateY(-40px)";
+            }
+            bgrgba5.onmouseout=function(){
+                var bgrgba5=this;
+                bgrgba5.children[0].style.backgroundColor="rgba(0,0,0,.5)";
+                bgrgba5.children[1].style.transform="scale(1)";
+                bgrgba5.children[2].style.transform="translateY(0)";
+            }
+        }
+        var rotateimgs=document.getElementsByClassName("w276h230");
+        for (var rotateimg of rotateimgs){
+            rotateimg.onmouseover=function(){
+                var rotateimg = this;
+                rotateimg.children[0].style.transform="rotate(-90deg)";
+                rotateimg.children[0].style.opacity="0.8";
+            }
+            rotateimg.onmouseout=function(){
+                var rotateimg = this;
+                rotateimg.children[0].style.transform="rotate(0)";
+                rotateimg.children[0].style.opacity="1";
+            }
+            var translightbtn=rotateimg.parentNode.parentNode.children[4].children[0];
+            translightbtn.onmouseover=function(){
+                var translightbtn=this;
+                var light= translightbtn.parentNode.children[1];
+                light.style.transform="translateX(260px) skewX(-30deg)";
+            }
+            translightbtn.onmouseout=function(){
+                var translightbtn=this;
+                var light= translightbtn.parentNode.children[1];
+                light.style.transform="translateX(-50px) skewX(-30deg)";
+            }
+        }
+        var imgshadows = document.getElementsByClassName("w585h180");
+        for(var imgshadow of imgshadows){
+            imgshadow.onmouseover=function(){
+                var imgshadow=this;
+                imgshadow.children[0].children[0].style.transform="scale(1.2)";
+                imgshadow.children[0].children[1].style.opacity="1";
+                imgshadow.children[1].children[2].style.backgroundColor="#ff6700";
+                imgshadow.children[1].children[2].style.color="#fff";
+            }
+            imgshadow.onmouseout=function(){
+                var imgshadow=this;
+                imgshadow.children[0].children[0].style.transform="scale(1)";
+                imgshadow.children[0].children[1].style.opacity="0";
+                imgshadow.children[1].children[2].style.backgroundColor="#ddd";
+                imgshadow.children[1].children[2].style.color="#000";
+            }
+       }
+       var helpnavs=document.getElementsByClassName("w216h320");
+       for(var helpnav of helpnavs){
+           helpnav.onmouseover=function(){
+               var helpnav=this;
+               var img = helpnav.children[1];
+               img.style.transform="rotate(-90deg)";
+               img.style.opacity="0.7";
+           }
+           helpnav.onmouseout=function(){
+               var helpnav=this;
+               var img = helpnav.children[1];
+               img.style.transform="rotate(0deg)";
+               img.style.opacity="1";
+           }
+       }
+       var contacts=document.getElementsByClassName("w280h210");
+        for(var contact of contacts){
+            contact.onmouseover=function(){
+                var contact = this;
+                console.log(contact)
+                var img = contact.children[0].children[0];
+                contact.style.backgroundColor="#ff6700";
+                contact.style.color="white";
+                img.style.transform="translateY(-100px)"
+            }
+            contact.onmouseout=function(){
+                var contact = this;
+                console.log(contact)
+                var img = contact.children[0].children[0];
+                contact.style.backgroundColor="white";
+                contact.style.color="black";
+                img.style.transform="translateY(0)"
+            }
+        }
+        var turnbig=document.getElementsByClassName("w240h50 bdff6700 position-absolute t0 bdr25");
+        turnbig[0].onmouseover=function(){
+            var btn=this;
+            btn.style.animation="change .5s linear infinite";
+        }
+       turnbig[0].onmouseout=function(){
+           var btn=this;
+           btn.style.animation="";
+       }
+    </script>
+</body>
+<script>
+
+</script>
+</html>

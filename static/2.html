@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function A(age,name){
+            this.age=age;
+            this.name=name;
+        }
+        A.prototype.show = function(){
+            console.log(this.age);
+            console.log(this.name);
+            console.log(this.job);
+        }
+        function B(age,name,job){
+            A.apply(this,arguments);
+            this.job=job;
+        }
+        B.prototype=new A();
+        var b=new A(14,'独行侠');
+        var a=new B(15,'狼侠','侠客');
+        a.show();
+        b.show();
+    </script>
+</body>
+</html>

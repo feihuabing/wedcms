@@ -1,0 +1,53 @@
+.bgbanner5{
+    background-image: url(../img/banner5.jpg);
+    background-size:120%;
+    background-repeat: no-repeat;
+    background-position:-20px -40px;
+}
+.t200{
+    top: 150px;
+}
+.t300{
+    top: 300px;
+}
+.t440{
+    top: 440px;
+}
+.w820{
+    width: 820px;
+}
+.l300{
+    left: 300px;
+}
+.w350h264{
+    width: 350px;
+    height: 264px;
+}
+.mauto{
+    margin: auto;
+}
+.h340{
+    height: 340px;
+}
+.t264{
+    top: 264px;
+}
+.mt-10{
+    margin-top: -10px;
+}
+.w340{
+    width: 350px;
+}
+.zindex10{
+    z-index: 10;
+}
+@keyframes change {
+    from{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,152 @@
+$(function() {
+	//var win_width = $(window).width();
+	//var max_width = win_width > 1920 ? 1920 : win_width;
+	var win_height = $(window).height();
+	//baseSlider
+	if($('#baseSlider').length>0){
+		//$('#baseSlider').height(win_height);$('#baseSlider .slides li').height(win_height);
+		$('#baseSlider').flexslider({slideshowSpeed:8000, animationSpeed:800, directionNav: true, pauseOnAction: false, slideshowSpeed: 8000, prevText: "上一页", nextText: "下一个"});
+	}
+	//右侧在线客服
+	$("#service-menu").each(function(){
+		$(this).find(".btn-wx").mouseenter(function(){
+			$(this).find(".pic").fadeIn("fast");
+		});
+		$(this).find(".btn-wx").mouseleave(function(){
+			$(this).find(".pic").fadeOut("fast");
+		});
+		$(this).find(".btn-phone").mouseenter(function(){
+			$(this).find(".phone").fadeIn("fast");
+		});
+		$(this).find(".btn-phone").mouseleave(function(){
+			$(this).find(".phone").fadeOut("fast");
+		});
+		$(this).find(".btn-qq").mouseenter(function(){
+			$(this).find(".qq").fadeIn("fast");
+		});
+		$(this).find(".btn-qq").mouseleave(function(){
+			$(this).find(".qq").fadeOut("fast");
+		});
+		$(this).find(".btn-top").click(function(){
+			$("html, body").animate({"scroll-top":0}, 600);
+		});
+	});
+	//右侧客服
+	var lastRmenuStatus = false;
+	$(window).scroll(function(){
+		if($(window).scrollTop() >= $(".header").height()){
+			$(".header").addClass("fixed");
+		} else {
+			$(".header").removeClass("fixed");
+		}
+		//
+		if($(window).scrollTop()>200){
+			$("#service-menu").data("expanded", true);
+		} else {
+			$("#service-menu").data("expanded", false);
+		}
+		if($("#service-menu").data("expanded") != lastRmenuStatus){
+			lastRmenuStatus=$("#service-menu").data("expanded");
+			if(lastRmenuStatus){
+				$("#service-menu .btn-top").slideDown();
+			} else {
+				$("#service-menu .btn-top").slideUp();
+			}
+		}
+	});
+	//LazyLoad
+	if($("img.lazy").length>0){
+		$("img.lazy").lazyload({threshold : 300}); 
+	}
+	//手机二维码
+	if($("#qrcodeMobileUrl").length>0){
+		$("#qrcodeMobileUrl").qrcode({width:150,height:150,text:utf16to8("http://m.365lvpai.com")});
+	}
+});
+//格式化字符串两边的空格等
+function trim(str) {
+	return str.replace(/(^\s*)|(\s*$)/g, '');
+	for (var i = 0; i < str.length && str.charAt(i) == "  "; i++);
+	for (var j = str.length; j > 0 && str.charAt(j - 1) == "  "; j--);
+	if (i > j) return "";
+	return str.substring(i, j);
+}
+//返回顶部
+function scroll_top(id,time){
+	$("html,body").animate({scrollTop:$(id).offset().top},time);
+}
+//需求提交
+function add_sinup(id){
+	var name = trim($(id).find('input[name=name]').val());
+	var mobile = trim($(id).find('input[name=tel]').val());
+	if($(id).find('input[name=company]').length>0){
+		company = trim($(id).find('input[name=company]').val());
+	} else {
+		company = '';
+	}
+	if($(id).find('input[name=email]').length>0){
+		email = trim($(id).find('input[name=email]').val());
+	} else {
+		email = '';
+	}
+	var note = trim($(id).find('textarea[name=note]').val());
+	if(name=='' || name == '您的称呼' || name == '请输入您的称呼'){
+		alert('请输入您的称呼');
+		return false;
+	}
+	if(!/^1[3|4|5|7|8]\d{9}$/.test(mobile)){
+		alert('请正确输入您的手机号码');
+		return false;
+	}
+	if(note=='' || note=='请输入您的需求或咨询'){
+		alert('请输入您的需求');
+		return false;
+	}
+	if(company!=''){
+		note = '公司名称：'+company+'；  '+note;
+	}
+	if(email!=''){
+		note = '电子邮件：'+email+'；  '+note;
+	}
+	$(id).find('.submit').val('正在提交...');
+	var url = 'http://'+window.location.host+'/index.php?m=booking&c=index&a=post';
+	$.post(url,{ajax:1,dosubmit:1,name:name,mobile:mobile,note:note,email:email,company:company,r:Math.random()},function(data){
+		var myObject = eval('('+data+')');
+		if(myObject.status==true) {
+			alert(myObject.msg);
+			$(id).find('input[name=name]').val('');
+			$(id).find('input[name=tel]').val('');
+			$(id).find('input[name=company]').val('');
+			$(id).find('input[name=email]').val('');
+			$(id).find('textarea[name=note]').val('');
+			$(id).find('.submit').val('提交需求');
+		} else {
+			alert(myObject.msg);
+			$(id).find('.submit').val('提交需求');
+		}
+	});
+}
+//字符串转换成UTF-8
+function utf16to8(str) {
+	var out, i, len, c;
+	out = "";
+	len = str.length;
+	for (i = 0; i < len; i++) {
+		c = str.charCodeAt(i);
+		if ((c >= 0x0001) && (c <= 0x007F)) {
+			out += str.charAt(i)
+		} else if (c > 0x07FF) {
+			out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+			out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+			out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F))
+		} else {
+			out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+			out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F))
+		}
+	}
+	return out
+}
+//WOW.js
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+}
